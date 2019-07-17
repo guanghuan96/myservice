@@ -37,6 +37,7 @@ public class test1 {
 	      System.out.println(stu.getStuid());
 	      session.commit();
 	      System.out.println("aaCCCCaa");
+	      System.out.println("aaaaasssxxxxxaa");
 	    is.close();
 	}
 }
