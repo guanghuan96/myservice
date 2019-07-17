@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 命名空間 -->
+<mapper namespace="test">
+<!--按照学号来查询  -->
+  <select id="selectStu" parameterType="int" resultType="pojo.Student">
+    select * from student where stuid = #{id}
+  </select>
+<!--模糊查询  -->
+<select id="selectStuByName" parameterType="string" resultType="pojo.Student">
+    select * from student where name like '%${value}%'
+</select>
+
+<!--查询所有学生信息  -->
+<select id="selectall" resultType="pojo.Student">
+select * from student
+</select>
+
+<!--插入一条数据  -->
+<insert id="insert" useGeneratedKeys="true" keyProperty="stuid">
+insert into student (name,pwd,age,gender) values(#{name},#{pwd},#{age},#{gender})
+</insert>
+
+
+
+
+</mapper>
