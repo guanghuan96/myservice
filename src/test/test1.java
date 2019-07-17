@@ -36,7 +36,7 @@ public class test1 {
 	      int rows=session.insert("test.insert", stu);
 	      System.out.println(stu.getStuid());
 	      session.commit();
-	      System.out.println("aaaa");
+	      System.out.println("aaCCCCaa");
 	    is.close();
 	}
 }
